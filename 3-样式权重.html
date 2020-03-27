@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式权重</title>
+    <style type="text/css">
+        /*样式权重：!important(10000)>内联样式(1000)>id选择器(100)>类、伪类选择器(10)>标签选择器(1)*/
+        p {
+            color: blue;
+        }
+
+        #content div.main_content h2 { /* 100+1+10+1 = 112 */
+            color: red;
+        }
+        #content .main_content h2 { /* 100+10+1 = 111 111<112，所以h2最终表现为红色*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<p style="color: red">这是内容1</p>
+<p>这是内容2</p>
+<!--内联样式权重比标签权重大，所以上红下蓝-->
+
+
+<div id="content">
+    <div class="main_content">
+        52
+        <h2>这是一个h2标题</h2>
+    </div>
+</div>
+</body>
+</html>
