@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        /*1. * 匹配所有标签（慎用，*性能比较差，因为*要匹配所有标签，在开发时不建议使用*/
+        * {
+            color: red;
+        }
+        /*2. 标签选择器：用来匹配所对应的标签*/
+        span {
+            display: block;
+            margin-right: 20px;
+            border: solid 1px gray;
+        }
+        /*3. 类选择器：用来选择class命名的标签*/
+        .wrapper {
+            color: aqua;
+        }
+        /*4. id选择器：用来选择用id命名的标签，html中标签id不能重复*/
+        #content {
+            color: pink;
+        }
+        /*5. 派出选择器：根据上下文来确定选择的标签*/
+        .box2 li {
+            color: chartreuse;
+        }
+        /*6. 伪类选择器*/
+    </style>
+</head>
+<body>
+<p>这是P标签</p>
+<strong>这是strong标签</strong>
+<span>这是span标签</span>
+<div>这是div标签</div>
+<div class="wrapper">这是div标签</div>
+<p class="wrapper">这是div标签</p>
+<p id="content">这是内容</p>
+<ul class="box1">
+    <li>li001</li>
+    <li>li002</li>
+    <li>li003</li>
+</ul>
+<ul class="box2">
+    <li>li001</li>
+    <li>li002</li>
+    <li>li003
+        <ul>
+            <li>subli1</li>
+            <li>subli2</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
