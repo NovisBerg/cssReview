@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS属性选择器</title>
+    <style>
+        /* [属性名]：包含有指定属性名的元素 （常用）
+        [属性名=值]：属性名的值为指定值的元素 （常用）
+        [属性名~=值]：属性名的值包含指定值的元素
+        [属性名^=值]：属性名的值以指定值开头的元素
+        [属性名$=值]：属性名的值以指定值结尾的元素
+         */
+        div[title] {
+            font-weight: bold;
+        }
+
+        input[name="usr"] {
+            background-color: gray;
+        }
+
+        div[class$="2"] {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="content1" title="内容">content1</div>
+<div class="content2">content2</div>
+
+<form action="">
+    <input type="text" name="usr">
+    <input type="text" name="account">
+</form>
+</body>
+</html>

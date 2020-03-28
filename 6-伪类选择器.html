@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS伪类选择器</title>
+    <style>
+        /*伪类：专门用来表示元素的一种特殊状态*/
+        /* 常用伪类选择器：
+        1. a（超链接）伪类
+            :link 未访问状态
+            :visited 已被访问状态
+            :hover 鼠标悬停状态
+            :active 用户激活状态
+        2. 表单伪类
+            :focus 获得焦点
+        3. :first-child/:last-child/:nth-child(number) 用来选择元素的第n个子节点 */
+        a:link {
+            color: red;
+        }
+        a:hover {
+            color: yellow;
+        }
+        a:active {
+            color: blue;
+        }
+        a:visited {
+            color: green;
+        }
+
+        input:focus {
+            outline: 1px solid red;
+        }
+
+        ul li:first-child {
+            color: #ff1299
+        }
+        ul li:last-child {
+            color: #38ff24
+        }
+        ul li:nth-child(2) {
+            color: #2c3cff
+        }
+    </style>
+</head>
+<body>
+<a href="#">单击我跳转</a>
+
+<input type="text">
+
+<ul>
+    <li>aaaa</li>
+    <li>aaaa</li>
+    <li>aaaa</li>
+    <li>aaaa</li>
+</ul>
+</body>
+</html>

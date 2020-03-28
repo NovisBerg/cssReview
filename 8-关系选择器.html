@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS关系选择器</title>
+    <style>
+        /*
+        1. 空格：后代选择器
+        2. >符号：只选择儿子元素
+        3. +符号：兄弟选择器
+         */
+        /* h1 strong{
+            color: #ffffff;
+            background-color: #000000;
+        } */
+        /* h1>strong{
+            color: #ffffff;
+            background-color: #000000;
+        } */
+        strong+span {
+            color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+<h1>
+    <strong>
+        <span>
+            关系1
+        </span>
+    </strong>
+    <span>
+        <strong>
+            关系2
+        </strong>
+    </span>
+</h1>
+</body>
+</html>
