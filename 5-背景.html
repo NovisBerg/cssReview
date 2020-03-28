@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS背景</title>
+    <style>
+        .BackGroundColor {
+            background-color: rgb(14,555,32);
+        }
+        
+        .BackGroundImage .Image{
+            width: 200px;
+            height: 100px;
+            background-image: url("http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/14/e60a93db49e8f9b9e729cfb06c7488f2.jpg");
+        }
+        
+        .BackGroundRepeat {
+            height: 80px;
+            background-image: url("https://box.kancloud.cn/c00cc55f2dc1af4897c5ae7deeeae22b_231x88.png");
+            background-repeat: repeat;
+        }
+        
+        .BackGroundPosition {
+            height: 80px;
+            background-image: url("https://box.kancloud.cn/c00cc55f2dc1af4897c5ae7deeeae22b_231x88.png");
+            background-position: center center;
+        }
+        .BackGroundAttachment {
+            height: 80px;
+            background-image: url("https://box.kancloud.cn/c00cc55f2dc1af4897c5ae7deeeae22b_231x88.png");
+            background-attachment: scroll;
+        }
+
+        .BackGround {
+            height: 100px;
+            background: #fff url("https://box.kancloud.cn/c00cc55f2dc1af4897c5ae7deeeae22b_231x88.png") repeat fixed center center;
+        }
+    </style>
+</head>
+<body>
+<div class="BackGroundColor">background-color：设置背景颜色，如#666666，red，rgb()</div>
+
+<div class="BackGroundImage">
+    <p>background-image：设置背景图，如none、url({url})</p>
+    <div class="Image"></div>
+</div>
+
+<div class="BackGroundRepeat">background-repeat：设置对象的背景图像铺排方式，repeat（默认值）为在纵向和横向平铺，no-repeat为不平铺，repeat-x为仅在横向平铺，repeat-y为仅在纵向平铺</div>
+
+<div class="BackGroundPosition">background-position：设置对象的背景图像位置。{ x-number | top | center | bottom }{ y-number | left | center | right }：控制背景图片在元素的位置：x轴、y轴。其铺排方式为no-repeat</div>
+
+<div class="BackGroundAttachment">background-attachment：设置对象的背景图像滚动位置。scroll为默认值，背景图像会随着页面其余部分的滚动而滚动。fixed表示当页面的其余部分滚动时，背景图像不会移动。</div>
+
+<div class="BackGround">background：简写属性，在一个声明中设置所有的背景属性。语法：background: color image repeat attachment position</div>
+</body>
+</html>
