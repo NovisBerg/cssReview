@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体属性</title>
+    <style>
+        /* font-size:字号
+        font-family:字体
+        font-style:文字样式
+        font-weight:文字加粗
+        ling-height:行高
+        color:文字颜色
+        text-decoration:文字修饰
+        text-align:文字对齐方式
+        text-transform:字母大小写
+        text-indent:文本缩进 */
+        .FontSize .px {
+            font-size: 18px; /* Chrome默认是16px */
+        }
+        .FontSize .percent {
+            font-size: 80%;
+        }
+
+        .FontFamily p { /* 按优先顺序排列，以逗号隔开，如果字体名称包含空格，则要用引号括起来 */
+            font-family: Courier, "Courier New", monospace;
+        }
+
+        .FontStyle .Normal {
+            font-style: normal;
+        }
+        .FontStyle .Italic {
+            font-style: italic;
+        }
+        .FontStyle .Oblique {
+            font-style: oblique;
+        }
+
+        .FontWeight .Normal {
+            font-weight: normal;
+        }
+        .FontWeight .Bold {
+            font-weight: bold;
+        }
+        .FontWeight .Bolder {
+            font-weight: bolder;
+        }
+        .FontWeight .Lighter {
+            font-weight: lighter;
+        }
+        .FontWeight .Shuzi {
+            font-weight: 500;
+        }
+
+        .Color .Name {
+            color: red;
+        }
+        .Color .Rgb {
+            color: rgb(100,14,200);
+        }
+        .Color .Shiliu {
+            color: #345678;
+        }
+
+        .LineHeight .Normal {
+            line-height: normal;
+        }
+        .LineHeight .Px {
+            line-height: 24px;
+        }
+        .LineHeight .Number {
+            line-height: 1.5;
+        }
+        
+        .TextDecoration .Normal {
+            text-decoration: none;
+        }
+        .TextDecoration .Underline {
+            text-decoration: underline;
+        }
+        .TextDecoration .LineThrough {
+            text-decoration: line-through;
+        }
+        .TextDecoration .Overline {
+            text-decoration: overline;
+        }
+        
+        .TextAlign .Left {
+            text-align: left;
+        }
+        .TextAlign .Center {
+            text-align: center;
+        }
+        .TextAlign .Right {
+            text-align: right;
+        }
+        
+        .TextTransform .None {
+            text-transform: none;
+        }
+        .TextTransform .Capitalize {
+            text-transform: capitalize;
+        }
+        .TextTransform .Uppercase {
+            text-transform: uppercase;
+        }
+        .TextTransform .Lowercase {
+            text-transform: lowercase;
+        }
+
+        .TextIndent .Px {
+            text-indent: 24px;
+        }
+        .TextIndent .Em {
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+<div class="FontSize">
+    <p class="px">根据像素设置文字大小</p>
+    <p class="percent">根据百分比设置文字大小，其百分比取值是基于父对象中的字体尺寸大小</p>
+</div>
+
+<div class="FontFamily">
+    <p>设置文本字体</p>
+</div>
+
+<div class="FontStyle">
+    <p class="Normal">normal：正常的字体</p>
+    <p class="Italic">italic：斜体。对于没有斜体变量的特殊字体，将应用oblique</p>
+    <p class="Oblique">oblique：倾斜的字体</p>
+</div>
+
+<div class="FontWeight">
+    <p class="Normal">normal：默认值，正常的字体</p>
+    <p class="Bold">bold：粗体</p>
+    <p class="Bolder">bolder：比bold粗</p>
+    <p class="Lighter">lighter：比normal细</p>
+    <p class="Shuzi">{100-900}：定于有粗到细的字符。400等同于normal，700等同于bold。</p>
+</div>
+
+<div class="Color">
+    <p class="Name">name：颜色名称指定color，如red</p>
+    <p class="Rgb">rgb：指定颜色为RGB值，如rgb(100,14,200)</p>
+    <p class="Shiliu">{颜色16进制}：指定颜色为16进制，如#345678</p>
+</div>
+
+<div class="LineHeight">
+    <p class="Normal">normal：默认值，默认行高</p>
+    <p class="Px">{number+px}：指定行高为长度像素</p>
+    <p class="Number">{number}：指定行高为字体大小的倍数</p>
+</div>
+
+<div class="TextDecoration">
+    <p class="None">None：默认值，无修饰</p>
+    <p class="Underline">underline：下划线</p>
+    <p class="LineThrough">line-through：贯穿线</p>
+    <p class="Overline">overline：上划线</p>
+</div>
+
+<div class="TextAlign">
+    <p class="Left">left：默认值，左对齐</p>
+    <p class="Center">center：居中对齐</p>
+    <p class="Right">right：右对齐</p>
+</div>
+
+<div class="TextTransform">
+    <p class="None">none：默认值（无转换发生）</p>
+    <p class="Capitalize">capitalize：将每个单词的第一个字母转换成大写。we will we will rock you</p>
+    <p class="Uppercase">uppercase：转换成大写。hello world</p>
+    <p class="Lowercase">lowercase：转换成小写。DUA LIPA</p>
+</div>
+
+<div class="TextIndent">
+    <p class="Px">{number+px}：首行缩进number像素</p>
+    <p class="Em">{number+em}：首行缩进number字符</p>
+</div>
+</body>
+</html>
