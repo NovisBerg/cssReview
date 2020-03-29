@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS清除浮动</title>
+    <style>
+        /* 清除浮动有三种方法：
+            1.添加空标签并设置样式：
+                clear: left 清除左浮动
+                clear: right 清除右浮动
+                clear: both 清除左右浮动，常用这种方式
+                clear: none 左右浮动都不清除
+            2. 在要清除浮动的父级添加样式：overflow: hidden
+                overflow: hidden 表示超出部分隐藏，也可以用来实现清除浮动
+            3. 添加伪元素
+                本质与方法1类似，但避免的重复添加空标签的代码书写，一般推荐用这种方式。
+         */
+        .wrapper {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #666;
+            /*overflow: hidden; !* 清除浮动方法二 *!*/
+        }
+        .wrapper:after {
+            content: "";
+            display: block;
+            clear: both; /* 清除浮动方法三 */
+        }
+        .box1, .box2, .box3 {
+            width: 200px;
+            height: 150px;
+        }
+        .box1 {
+            background-color: #ff0000;
+            float: left;
+        }
+        .box2 {
+            background-color: #217aff;
+            float: right;
+        }
+        .box3 {
+            background-color: #5ffdff;
+        }
+        /*.clear {*/
+        /*    clear: both; !* 清除浮动方法一 *!*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--<div class="wrapper">-->
+<!--    <div class="box1">box1</div>-->
+<!--    <div class="box2">box2</div>-->
+<!--&lt;!&ndash;    清除浮动方法一：添加空标签&ndash;&gt;-->
+<!--    <div class="clear"></div>-->
+<!--    <div class="box3">box3</div>-->
+<!--</div>-->
+
+<div class="wrapper">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+</div>
+<div class="box3">box3</div>
+</body>
+</html>

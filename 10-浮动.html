@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS浮动</title>
+    <style>
+        /* 浮动就是让块级标签不独占一行，目的（使用场景）是把块级标签元素排在一行上。
+        对应的值有none（默认值，不浮动）、left（元素向左浮动）、right（元素向右浮动）、inherit（从父元素继承浮动属性） */
+        /* 浮动的原理就是让元素脱离文档流，不占用标准流。 */
+        /* 浮动后，后面的元素不管是块级还是行级元素不会显示在下一行。因此要学会清除浮动，目的是让后面元素自动掉到下一行。
+        有三种方法：
+            1.添加空标签并设置样式：
+                clear: left 清除左浮动
+                clear: right 清除右浮动
+                clear: both 清除左右浮动，常用这种方式
+                clear: none 左右浮动都不清除
+         */
+        .wrapper {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #666;
+        }
+        .box1, .box2, .box3 {
+            width: 200px;
+            height: 150px;
+        }
+        .box1 {
+            background-color: #ff0000;
+            float: left;
+        }
+        .box2 {
+            background-color: #217aff;
+            float: right;
+        }
+        .box3 {
+            background-color: #ff72c6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+</html>
