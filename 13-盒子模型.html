@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS盒子模型</title>
+    <style>
+        /* 每个元素都是一个盒子，一个盒子由margin（外边距）、border（边框线）、padding（内边距）和content（内容）组成
+        区别外边距和内边距是以边框为参照。
+        系统默认外边距为8px。
+        1. 外边距（margin）指元素边框线之外的距离。
+            margin、margin-left、margin-right、margin-top、margin-bottom。margin使用方法：x（上下左右）、x（上下）x（左右）、x（上）x（左右）x（下）、x（上）x（右）x（下）x（左）
+        2. 内边距（padding）指边框线内到content的距离。
+            padding、padding-top、padding-bottom、padding-left、padding-right。padding使用方法：x（上下左右）、x（上下）x（左右）、x（上）x（左右）x（下）、x（上）x（右）、x（下）、x（左）
+        标准的盒子模型：总宽度 = 内容宽度 + 边框宽度 + 内边距 + 外边距
+        怪异盒子模型（IE盒子模型）： 总宽度 = 内容宽度 + 外边距
+        原因是标准w3c规定css中的width与height表示的是content（内容）的宽度和高度，而IE中规定的width与height表示的是content + padding + border的宽度。
+         */
+        div {
+            margin: 200px 20px 88px 67px;
+            width: 800px;
+            padding: 10px 20px 30px 40px;
+            height: 400px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
