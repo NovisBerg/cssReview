@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-display属性</title>
+    <style>
+        /* display属性规定元素应该生成的框的类型。默认值是inline
+        常用的属性值：none：该元素不会被显示。
+            block：显示为块级元素，即前后带有换行符。
+            inline：显示为行级元素，前后没有换行符，为默认值。
+            inline-block：行内块元素。
+            table：作为块级表格来显示（类似于<table>），前后带有换行符。
+            inline-table：作为内联表格来显示，前后没有换行符。
+            table-cell：作为一个表格单元格来显示（类似于<td>和<th>
+        */
+        .None {
+            background-color: red;
+            display: none;
+        }
+        .Block {
+            background-color: green;
+            display: block;
+        }
+        .Inline {
+            background-color: yellow;
+            display: inline;
+        }
+        .InlineBlock {
+            background-color: blue;
+            display: inline-block;
+        }
+        .Table {
+            background-color: pink;
+            display: table;
+        }
+        .InlineTable {
+            background-color: orange;
+            display: inline-table;
+        }
+        .TableCell {
+            background-color: purple;
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+<div class="None">none：该元素不会被显示。</div>
+<div class="Block">block：显示为块级元素，即前后带有换行符。</div>
+<div class="Inline">inline：显示为行级元素，前后没有换行符，为默认值。</div>
+<div class="InlineBlock">inline-block：行内块元素。</div>
+<div class="Table">table：作为块级表格来显示（类似于table标签），前后带有换行符。</div>
+<div class="InlineTable">inline-table：作为内联表格来显示，前后没有换行符。</div>
+<div class="TableCell">table-cell：作为一个表格单元格来显示（类似于td和th标签）</div>
+
+</body>
+</html>
